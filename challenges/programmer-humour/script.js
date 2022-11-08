@@ -17,3 +17,8 @@ const getImage = () => {
             
             </div>
             </div>`;
+               ulElement.appendChild(liElement);
+    })
+    .catch((err) => console.warn(err));
+};
+buttonElement.addEventListener("click", getImage);
