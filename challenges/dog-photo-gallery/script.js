@@ -12,5 +12,10 @@ function getImage(){
       }
       return response.json();
     })
-
+     .then((image) => {
+      const imageElement = document.createElement("img");
+      imageElement.src = image.message;
+      liElement.appendChild(imageElement);
+    })
+    .catch((error) => console.warn(error));
 }
